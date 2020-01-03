@@ -12,9 +12,9 @@ end
 def reduce(source_array, starting_point = nil)
   i = 0 
   if starting_point == nil
-    starting_point= 0 
+    starting_point= source_array[0] 
   end
-  value = source_array[i]
+  value = starting_point
   while i < source_array.length do
     current_element = source_array[i]
     value = yield(value, current_element)
