@@ -18,7 +18,7 @@ def reduce(source_array, starting_point = nil)
   end
   while i < source_array.length do
     current_element = source_array[i]
-    yield(value, current_element)
+    value = yield(current_element)
     i += 1 
   end
   value
